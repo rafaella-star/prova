@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleições</title>
+</head>
+<body>
+    <h2>Eleições:</h2>
+
+<div><img src="https://i.pinimg.com/236x/5c/4b/40/5c4b40771bce79fca1b4f5ea6e355a35.jpg" width="320px" alt="Songoku">
+<input type="text" id="son_goku" placeholder="insira nome do candidato">
+<input type="text" id="sup_sayajin" placeholder="insira nome do partido">
+<input type="text" id="camp_valor" placeholder="insira valor da campanha">
+<input type="text" id="num_votos" placeholder="insira numero de votos">
+</div>
+
+<br><br>
+
+<div><img src="https://i.pinimg.com/236x/fc/f6/42/fcf642ff3a88eeda977b5f0ea31b1480.jpg"width="320px" alt="Meliodas">
+<input type="text" id="prin_vegeta" placeholder="insira nome do candidato">
+<input type="text" id="sup_vegeta" placeholder="insira nome do partido">
+<input type="text" id="camp_valor" placeholder="insira valor da campanha">
+<input type="text" id="num_votos" placeholder="insira numero de votos">
+</div>
+
+<br><br>
+<br>
+
+<div><input type="text" id="valor_01" placeholder="insira valor de votos em branco"></div>
+<div><input type="text" id="valor_02" placeholder="insira valor de votos nulos"></div>
+
+<br><br>
+
+<div><button onclick="analise_de_eleição()"><b>Analisar eleição</b></button></div>
+
+<br><br>
+
+<div id="div_msg"></div>
+
+<br>
+<div><b>Custos do Eleitor</b></div>
+
+</body>
+</html>
+<script>
+    function analise_de_eleição(){
+        var songoku = Number (son_goku);
+        var supersayajin = Number (sup_sayajin);
+        var campo = Number(camp_valor);
+        var num_votos = Number(num_votos);
+        var vegeta = Number (prin_vegeta);
+        var supervegeta = Number (sup_vegeta);
+        var campo2 = Number(camp_valor);
+        var num_votos2 = Number(num_votos);
+        var branco = Number(valor_01);
+        var nulo = Number (valor_02);
+        var result = Number (result_total) * 100;
+
+        div_msg.innerHTML +=`Votos:${campo / num_votos + num_votos2 + branco + nulo * result}`;
+        div_msg.innerHTML += `Votos:${campo / num_votos + num_votos2 + branco + nulo * result}`;
+        div_msg.innerHTML +=`votos em branco: ${valor_01}${campo / num_votos + num_votos2 + branco + nulo * result}`;
+        div_msg.innerHTML +=`votos nulo: ${valor_02}${campo / num_votos + num_votos2 + branco + nulo}`;
+    }
+
+    function Gastos(){
+        div_msg.innerHTML +=`Votos:${campo}`;
+        div_msg.innerHTML +=`Votos:${supersayajin}`;
+    }
+</script>
